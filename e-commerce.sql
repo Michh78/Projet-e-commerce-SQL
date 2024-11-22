@@ -50,10 +50,3 @@ CREATE TABLE IF NOT EXISTS Payment (
     payment_method TEXT NOT NULL,
     iban INTEGER NOT NULL
 );
-
-SELECT u.name, a.city, p.product, p.price
-FROM User u
-JOIN Adress a ON u.id_user = a.id_user
-JOIN Cart c ON u.id_user = c.id_user
-JOIN List l ON c.id_list = l.id_list
-JOIN Product p ON l.id_product = p.id_product;
